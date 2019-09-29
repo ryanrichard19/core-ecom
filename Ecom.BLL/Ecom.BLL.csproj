@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factories\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ecom.Domain\Ecom.Domain.csproj" />
+    <ProjectReference Include="..\Ecom.Data\Ecom.Data.csproj" />
+  </ItemGroup>
 </Project>

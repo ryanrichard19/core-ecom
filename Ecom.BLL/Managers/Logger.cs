@@ -1,10 +1,14 @@
 ﻿using System;
+using Ecom.Domain.Contacts.Repositories;
+
 namespace Ecom.BLL.Managers
 {
-    public class Logger
+    public class Logger: ILogger
     {
-        public Logger()
+
+        public void Log(Exception ex)
         {
+            throw new Exception(ex.Message, ex.InnerException);
         }
     }
 }

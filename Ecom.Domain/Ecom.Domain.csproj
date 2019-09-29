@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Contacts\" />
+    <Folder Include="Contacts\Handlers\" />
+    <Folder Include="Contacts\Repositories\" />
+    <Folder Include="Contacts\Managers\" />
+    <Folder Include="Contacts\Validators\" />
+    <Folder Include="Entities\BaseModels\" />
+    <Folder Include="Contacts\Factories\" />
+  </ItemGroup>
 </Project>

@@ -1,10 +1,8 @@
 ﻿using System;
 namespace Ecom.Domain.Entities.BaseModels
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
-        public BaseEntity()
-        {
-        }
+        public int Id { get; set; }
     }
 }

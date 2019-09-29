@@ -8,4 +8,15 @@
   <ItemGroup>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ecom.Data\Ecom.Data.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecom.BLL\Ecom.BLL.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+  </ItemGroup>
 </Project>

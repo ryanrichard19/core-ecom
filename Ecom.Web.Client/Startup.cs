@@ -2,6 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ecom.BLL.Factories;
+using Ecom.BLL.Handlers;
+using Ecom.BLL.Managers;
+using Ecom.BLL.Validators;
+using Ecom.Data.Contexts;
+using Ecom.Domain.Contacts.Factories;
+using Ecom.Domain.Contacts.Handlers;
+using Ecom.Domain.Contacts.Repositories;
+using Ecom.Domain.Contacts.Validators;
+using Ecom.Domain.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +34,12 @@ namespace Ecom.Web.Client
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<EcomDbContext>();
+            services.AddTransient<ILogger, Logger>();
+            services.AddTransient<IValidator<Product>, ProductValidator>();
+            services.AddTransient<IExceptionHandler, ExceptionHandler>();
+            services.AddTransient<IEntityFactory<Product>, ProductFactory>();
+            services.AddTransient<IProductRepository, ProductManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

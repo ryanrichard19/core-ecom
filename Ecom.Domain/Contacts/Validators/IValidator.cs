@@ -2,6 +2,6 @@
 {
     public interface IValidator<T>
     {
-        bool IsValidProperties(T entity);
+        bool IsValid(T entity);
     }
 }
